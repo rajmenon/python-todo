@@ -7,9 +7,11 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "charliermarsh.ruff",
-        "ms-python.debugpy"
+        "ms-python.debugpy",
+        "tamasfe.even-better-toml",
+        "pamaron.pytest-runner"
       ]
     }
   },
-  "postCreateCommand": "uv pip install --system ruff pytest pylint mypy && uv sync && ruff check . && pytest || true"
+  "postCreateCommand": "uv pip install --system ruff pytest pylint mypy && uv sync && ruff check . && pytest || true && python src/check_tools_installed.py"
 }
