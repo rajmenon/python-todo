@@ -1,0 +1,17 @@
+[project]
+name = "python-new"
+version = "0.1.0"
+description = "Python + UV + Ruff + Pytest Dev Container template"
+authors = [{ name = "Raj", email = "you@example.com" }]
+dependencies = []
+
+[tool.ruff]
+line-length = 88
+lint.select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
