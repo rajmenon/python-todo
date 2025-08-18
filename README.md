@@ -1,10 +1,4 @@
 
-This version sets a more personal tone, explains *why* you're using these tools (for practice), and still serves as excellent documentation for your project.
-
-<!--
-[PROMPT_SUGGESTION]Create the initial `src/todo/cli.py` file with a basic Typer app.[/PROMPT_SUGGESTION]
-[PROMPT_SUGGESTION]How do I write a simple test for my command-line interface using pytest?[/PROMPT_SUGGESTION]
--->
 # Python Todo App - A Learning Project
 
 This is a personal project to build a command-line todo application. The main goal is to practice and hone skills in modern Python development, including project structure, typing, testing, and tooling.
