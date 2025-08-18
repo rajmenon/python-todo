@@ -9,7 +9,9 @@
         "charliermarsh.ruff",
         "ms-python.debugpy",
         "tamasfe.even-better-toml",
-        "pamaron.pytest-runner"
+        "pamaron.pytest-runner",
+        "bierner.markdown-mermaid",
+        "aaron-bond.better-comments"
       ]
     }
   },
