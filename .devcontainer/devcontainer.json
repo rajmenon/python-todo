@@ -1,5 +1,5 @@
 {
-  "name": "Python Dev (UV + Ruff)",
+  "name": "Python ToDo",
   "dockerFile": "Dockerfile",
   "customizations": {
     "vscode": {
@@ -11,5 +11,5 @@
       ]
     }
   },
-  "postCreateCommand": "uv sync && ruff check . && pytest || true"
+  "postCreateCommand": "uv pip install --system ruff pytest pylint mypy && uv sync && ruff check . && pytest || true"
 }
