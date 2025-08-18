@@ -65,9 +65,7 @@ def check_mypy_strict():
         if result.returncode == 0:
             print("✅ mypy is installed and --strict mode is supported.")
         else:
-            print(
-                "⚠️ mypy is installed but --strict mode may not be configured correctly."
-            )
+            print("⚠️ mypy is installed but --strict mode may not be configured correctly.")
     except FileNotFoundError:
         print("❌ mypy not found. Please install it.")
 
