@@ -1,36 +1,43 @@
-# pyproject.toml
 [build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
-name = "todo-app"
+name = "python-todo"
 version = "0.1.0"
-description = "A clean, typed, idiomatic Python todo CLI"
-requires-python = ">=3.12"
-dependencies = ["typer>=0.12.0"]
+description = "A clean, testable CLI todo app for learning Python the right way."
 readme = "README.md"
-license = { text = "MIT" }
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [{ name = "Raj" }]
+dependencies = [
+  "typer>=0.12.0",
+  "rich>=13.7.0",
+]
 
 [project.scripts]
 todo = "todo.cli:app"
 
+[tool.uv]  # keeps uv happy; no special config needed
+
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+select = ["E", "F", "I", "UP", "B", "ANN", "C90"]
+ignore = ["ANN101", "ANN102"]
 src = ["src"]
 
-[tool.ruff.lint]
-select = ["E", "F", "I", "UP", "B", "N", "SIM", "C90"]
-ignore = ["E501"]
-
-[tool.ruff.lint.isort]
-known-first-party = ["todo"]
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+disallow_any_generics = true
+no_implicit_reexport = true
+explicit_package_bases = true
+mypy_path = "src"
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
 addopts = "-q"
-pythonpath = "src"
-
-[tool.setuptools.packages.find]
-where = ["src"]
+pythonpath = ["src"]
